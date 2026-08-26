@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="AspectCore.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageVersion Include="Castle.Core" Version="5.1.1" />
+    <PackageVersion Include="Castle.Core.AsyncInterceptor" Version="2.1.0" />
+    <PackageVersion Include="Autofac" Version="6.5.0" />
+    <PackageVersion Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
+  </ItemGroup>
+</Project>

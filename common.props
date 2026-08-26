@@ -1,0 +1,19 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Zidan.Wang</Authors>
+    <Company>Pluto Studio</Company>
+    <Copyright>Copyright © Pluto Studio 2015-2026</Copyright>
+    <Product>Scorpio</Product>
+    <Description>Scorpio.Aspect provides concrete dynamic-proxy (AOP) implementations for the Scorpio framework, built on AspectCore and Castle.Core.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://project-scorpio.github.io/Scorpio.Aspect/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/project-scorpio/Scorpio.Aspect</RepositoryUrl>
+    <PackageIconUrl>https://wzd24.github.io/Scorpio/scorpio.png</PackageIconUrl>
+    <RepositoryType>git</RepositoryType>
+    <StandardTargetFrameworks>netstandard2.0;net5.0;net6.0;net7.0;net8.0;net9.0;net10.0</StandardTargetFrameworks>
+    <MultiTargetFrameworks>netcoreapp3.1;net5.0;net6.0;net7.0;net8.0;net9.0;net10.0</MultiTargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+</Project>

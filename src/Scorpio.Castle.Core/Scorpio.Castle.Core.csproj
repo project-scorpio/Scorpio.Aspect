@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyTitle>Scorpio Castle core library</AssemblyTitle>
+    <PackageTags>Scorpio;Aspect;Castle;dependencyinjection;Modularity</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(ScorpioCoreRoot)src\Scorpio\Scorpio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Castle.Core" />
+    <PackageReference Include="Castle.Core.AsyncInterceptor" />
+  </ItemGroup>
+
+</Project>
