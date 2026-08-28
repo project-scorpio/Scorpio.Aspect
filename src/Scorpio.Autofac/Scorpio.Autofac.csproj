@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="$(ScorpioCoreRoot)src\Scorpio\Scorpio.csproj" />
+    <PackageReference Include="Scorpio" />
     <ProjectReference Include="..\Scorpio.Castle.Core\Scorpio.Castle.Core.csproj" />
   </ItemGroup>
 

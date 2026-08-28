@@ -3,6 +3,5 @@
   <Import Project="common.props"/>
   <PropertyGroup>
     <SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
-    <ScorpioCoreRoot>$(SourceRoot)..\Scorpio.Core\</ScorpioCoreRoot>
   </PropertyGroup>
 </Project>

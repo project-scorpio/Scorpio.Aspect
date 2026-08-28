@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="$(ScorpioCoreRoot)src\Scorpio\Scorpio.csproj" />
+    <PackageReference Include="Scorpio" />
   </ItemGroup>
 
   <ItemGroup>
