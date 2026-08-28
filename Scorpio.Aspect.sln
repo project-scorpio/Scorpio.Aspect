@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpio.Autofac", "src\Scor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpio.Autofac.Tests", "test\Scorpio.Autofac.Tests\Scorpio.Autofac.Tests.csproj", "{3F6FF610-869F-475B-8F1F-504C9D597EE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpio.TestBase", "test\Scorpio.TestBase\Scorpio.TestBase.csproj", "{F1733811-7780-4B6B-90FA-55718604C1CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,18 @@ Global
 		{3F6FF610-869F-475B-8F1F-504C9D597EE6}.Release|x64.Build.0 = Release|Any CPU
 		{3F6FF610-869F-475B-8F1F-504C9D597EE6}.Release|x86.ActiveCfg = Release|Any CPU
 		{3F6FF610-869F-475B-8F1F-504C9D597EE6}.Release|x86.Build.0 = Release|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Debug|x64.Build.0 = Debug|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Debug|x86.Build.0 = Debug|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Release|x64.ActiveCfg = Release|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Release|x64.Build.0 = Release|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Release|x86.ActiveCfg = Release|Any CPU
+		{F1733811-7780-4B6B-90FA-55718604C1CA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,5 +126,6 @@ Global
 		{A5884FF1-E6F4-4C6A-A299-9A518F35DF7C} = {0C88DD14-F956-CE84-757C-A364CCF449FC}
 		{938EA9FB-1D03-4F30-A91B-BC9EDDEE9F6A} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{3F6FF610-869F-475B-8F1F-504C9D597EE6} = {0C88DD14-F956-CE84-757C-A364CCF449FC}
+		{F1733811-7780-4B6B-90FA-55718604C1CA} = {0C88DD14-F956-CE84-757C-A364CCF449FC}
 	EndGlobalSection
 EndGlobal

@@ -11,6 +11,7 @@ Scorpio.Aspect/
 │   ├── Scorpio.Castle.Core/    # 基于 Castle.Core 的代理实现
 │   └── Scorpio.Autofac/        # 基于 Autofac 的容器适配与代理实现
 └── test/
+    ├── Scorpio.TestBase/         # 测试基类（IntegratedTest 等，本地副本）
     ├── Scorpio.Aspect.TestBase/  # Aspect 相关测试的共享基础设施
     ├── Scorpio.AspectCore.Tests/ # Scorpio.AspectCore 的单元测试
     └── Scorpio.Autofac.Tests/    # Scorpio.Autofac 的单元测试
@@ -24,11 +25,9 @@ Scorpio.Aspect/
 
 ## 依赖关系
 
-两个实现项目均依赖 Scorpio.Core 的 `Scorpio` 程序集（AOP 抽象与模块系统）。
-
-> 当前仓库在本地开发时通过相对路径的 **项目引用** 指向同级的 `Scorpio.Core` 仓库：
-> `$(ScorpioCoreRoot)src\Scorpio\Scorpio.csproj`（由根目录 `Directory.Build.props` 中的 `ScorpioCoreRoot` 定义）。
-> 正式独立打包/发布时，应将其替换为对 `Scorpio` NuGet 包的 `PackageReference`。
+三个实现项目均依赖 `Scorpio` NuGet 包（AOP 抽象与模块系统），版本由根目录
+`Directory.Packages.props` 集中管理（当前 `0.1.2`）。测试基类 `Scorpio.TestBase` 已内联到本仓库，
+同样依赖 `Scorpio` 包，因此本仓库不再直接引用 `Scorpio.Core` 源码。
 
 ## 构建、测试与打包
 

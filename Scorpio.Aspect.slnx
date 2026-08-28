@@ -5,6 +5,7 @@
     <Project Path="src/Scorpio.Autofac/Scorpio.Autofac.csproj" />
   </Folder>
   <Folder Name="/test/">
+    <Project Path="test/Scorpio.TestBase/Scorpio.TestBase.csproj" />
     <Project Path="test/Scorpio.Aspect.TestBase/Scorpio.Aspect.TestBase.csproj" />
     <Project Path="test/Scorpio.AspectCore.Tests/Scorpio.AspectCore.Tests.csproj" />
     <Project Path="test/Scorpio.Autofac.Tests/Scorpio.Autofac.Tests.csproj" />
