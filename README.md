@@ -26,7 +26,7 @@ Scorpio.Aspect/
 ## 依赖关系
 
 三个实现项目均依赖 `Scorpio` NuGet 包（AOP 抽象与模块系统），版本由根目录
-`Directory.Packages.props` 集中管理（当前 `0.1.2`）。测试基类 `Scorpio.TestBase` 已内联到本仓库，
+`Directory.Packages.props` 集中管理（当前 `0.1.3`）。测试基类 `Scorpio.TestBase` 已内联到本仓库，
 同样依赖 `Scorpio` 包，因此本仓库不再直接引用 `Scorpio.Core` 源码。
 
 ## 构建、测试与打包
