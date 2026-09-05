@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpio.Autofac.Tests", "te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpio.TestBase", "test\Scorpio.TestBase\Scorpio.TestBase.csproj", "{F1733811-7780-4B6B-90FA-55718604C1CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorpio.Castle.Core.Tests", "test\Scorpio.Castle.Core.Tests\Scorpio.Castle.Core.Tests.csproj", "{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,18 @@ Global
 		{F1733811-7780-4B6B-90FA-55718604C1CA}.Release|x64.Build.0 = Release|Any CPU
 		{F1733811-7780-4B6B-90FA-55718604C1CA}.Release|x86.ActiveCfg = Release|Any CPU
 		{F1733811-7780-4B6B-90FA-55718604C1CA}.Release|x86.Build.0 = Release|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Debug|x64.Build.0 = Debug|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Debug|x86.Build.0 = Debug|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Release|x64.ActiveCfg = Release|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Release|x64.Build.0 = Release|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Release|x86.ActiveCfg = Release|Any CPU
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,5 +141,6 @@ Global
 		{938EA9FB-1D03-4F30-A91B-BC9EDDEE9F6A} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{3F6FF610-869F-475B-8F1F-504C9D597EE6} = {0C88DD14-F956-CE84-757C-A364CCF449FC}
 		{F1733811-7780-4B6B-90FA-55718604C1CA} = {0C88DD14-F956-CE84-757C-A364CCF449FC}
+		{A9F99213-2B96-43F8-B572-3AFFF8C19A8E} = {0C88DD14-F956-CE84-757C-A364CCF449FC}
 	EndGlobalSection
 EndGlobal

@@ -8,6 +8,7 @@
     <Project Path="test/Scorpio.TestBase/Scorpio.TestBase.csproj" />
     <Project Path="test/Scorpio.Aspect.TestBase/Scorpio.Aspect.TestBase.csproj" />
     <Project Path="test/Scorpio.AspectCore.Tests/Scorpio.AspectCore.Tests.csproj" />
+    <Project Path="test/Scorpio.Castle.Core.Tests/Scorpio.Castle.Core.Tests.csproj" />
     <Project Path="test/Scorpio.Autofac.Tests/Scorpio.Autofac.Tests.csproj" />
   </Folder>
 </Solution>

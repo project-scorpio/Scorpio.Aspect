@@ -14,6 +14,7 @@ Scorpio.Aspect/
     ├── Scorpio.TestBase/         # 测试基类（IntegratedTest 等，本地副本）
     ├── Scorpio.Aspect.TestBase/  # Aspect 相关测试的共享基础设施
     ├── Scorpio.AspectCore.Tests/ # Scorpio.AspectCore 的单元测试
+    ├── Scorpio.Castle.Core.Tests/ # Scorpio.Castle.Core 的单元测试
     └── Scorpio.Autofac.Tests/    # Scorpio.Autofac 的单元测试
 ```
 
