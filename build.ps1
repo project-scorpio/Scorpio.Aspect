@@ -23,9 +23,22 @@ function Read-RequiredSdk {
     return $defaultVersion
 }
 
+function Get-SdkVersion {
+    $dotnet = Get-Command dotnet -ErrorAction SilentlyContinue
+    if (-not $dotnet) { return $null }
+    try {
+        $version = (& dotnet --version 2>$null | Select-Object -First 1)
+        if ($version) { return [System.Version]($version.ToString().Trim()) }
+    } catch {
+    }
+    return $null
+}
+
 function Ensure-Sdk {
     param([string]$RequiredVersion)
-    if (Get-Command dotnet -ErrorAction SilentlyContinue) { return }
+    $required = [System.Version]$RequiredVersion
+    $current = Get-SdkVersion
+    if ($current -and ($current.CompareTo($required) -ge 0)) { return }
 
     $installDir = Join-Path $RepoRoot '.dotnet'
     New-Item -ItemType Directory -Force -Path $installDir | Out-Null
