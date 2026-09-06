@@ -47,7 +47,12 @@ function Ensure-Sdk {
         (New-Object System.Net.WebClient).DownloadFile('https://dot.net/v1/dotnet-install.ps1', $installer)
     }
     & $installer -Version $RequiredVersion -InstallDir $installDir -NoPath
-    if ($LASTEXITCODE -ne 0) { throw "Failed to install .NET SDK $RequiredVersion" }
+
+    $dotnetExe = Join-Path $installDir 'dotnet.exe'
+    if (-not (Test-Path $dotnetExe)) { throw "Failed to install .NET SDK $RequiredVersion" }
+    $installedVersion = (& $dotnetExe --version 2>$null | Select-Object -First 1)
+    if (-not $installedVersion) { throw "Failed to install .NET SDK $RequiredVersion" }
+
     $env:DOTNET_ROOT = $installDir
     $env:PATH = "$installDir$([IO.Path]::PathSeparator)$env:PATH"
 }
