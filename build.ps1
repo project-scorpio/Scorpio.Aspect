@@ -111,7 +111,7 @@ foreach ($item in $Target) {
         }
         'Publish' {
             if (-not $isTag) { throw 'Publish is only enabled for tag builds.' }
-            $source = if ($env:NUGET_SOURCE) { $env:NUGET_SOURCE } else { 'https://api.nuget.org/v3/index.json' }
+            $source = if ($env:NUGET_SOURCE) { $env:NUGET_SOURCE } else { 'https://www.myget.org/F/project-scorpio/api/v2/package' }
             $apiKey = $env:NUGET_API_KEY
             if (-not $apiKey) { throw 'NUGET_API_KEY environment variable is required to publish.' }
             $artifacts = Join-Path $RepoRoot 'artifacts'
