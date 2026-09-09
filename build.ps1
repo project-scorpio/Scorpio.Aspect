@@ -7,8 +7,6 @@ param(
     [switch]$TestAllFrameworks
 )
 
-$ErrorActionPreference = 'Stop'
-$ProgressPreference = 'SilentlyContinue'
 $RepoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 try {
@@ -25,24 +23,36 @@ function Read-RequiredSdk {
     return $defaultVersion
 }
 
-function Get-DotNetVersion {
-    try { return [System.Version](& dotnet --version) } catch { return $null }
+function Get-SdkVersion {
+    $dotnet = Get-Command dotnet -ErrorAction SilentlyContinue
+    if (-not $dotnet) { return $null }
+    try {
+        $version = (& dotnet --version 2>$null | Select-Object -First 1)
+        if ($version) { return [System.Version]($version.ToString().Trim()) }
+    } catch {
+    }
+    return $null
 }
 
 function Ensure-Sdk {
     param([string]$RequiredVersion)
     $required = [System.Version]$RequiredVersion
-    $current = Get-DotNetVersion
+    $current = Get-SdkVersion
     if ($current -and ($current.CompareTo($required) -ge 0)) { return }
 
     $installDir = Join-Path $RepoRoot '.dotnet'
     New-Item -ItemType Directory -Force -Path $installDir | Out-Null
     $installer = Join-Path $installDir 'dotnet-install.ps1'
     if (-not (Test-Path $installer)) {
-        Invoke-WebRequest -Uri 'https://dot.net/v1/dotnet-install.ps1' -OutFile $installer
+        (New-Object System.Net.WebClient).DownloadFile('https://dot.net/v1/dotnet-install.ps1', $installer)
     }
     & $installer -Version $RequiredVersion -InstallDir $installDir -NoPath
-    if ($LASTEXITCODE -ne 0) { throw "Failed to install .NET SDK $RequiredVersion" }
+
+    $dotnetExe = Join-Path $installDir 'dotnet.exe'
+    if (-not (Test-Path $dotnetExe)) { throw "Failed to install .NET SDK $RequiredVersion" }
+    $installedVersion = (& $dotnetExe --version 2>$null | Select-Object -First 1)
+    if (-not $installedVersion) { throw "Failed to install .NET SDK $RequiredVersion" }
+
     $env:DOTNET_ROOT = $installDir
     $env:PATH = "$installDir$([IO.Path]::PathSeparator)$env:PATH"
 }
